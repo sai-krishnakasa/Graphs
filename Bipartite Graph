@@ -1,4 +1,5 @@
-Bipartite Graph 
+Bipartite Graph : a graph is called a bipartate graph,if we can color all the nodes of a graph by using two different colors such that no teo adjacent nodes 
+shouldn't have the same color..
 class Solution{
 public:
     bool check(int source,vector<int>adj[],int N,vector<int>&colors){
