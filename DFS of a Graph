@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+void graphele(int v,int node,vector<int> adj[],vector<int>&vis,vector<int>&ans){
+	vis[node]=1;
+	ans.push_back(node);
+	for(int i=0;i<v;i++){
+		if (vis[i]==0){
+			for(auto it:adj[i]){
+				if(vis[it]==0){
+					ans.push_back(it);
+					vis[it]=1;
+				}
+			}
+			}
+		} 
+}
+int main(){
+	vector<int>ans;
+	int N,E;
+	cin>>N>>E;
+	vector<int>vis(N+1,0);
+	vector<int> adj[N+1];
+	for(int i=0;i<E;i++){
+		int u,v;
+		cin>>u>>v;
+		adj[u].push_back(v);
+		adj[v].push_back(u);
+	}
+	for(int i=0;i<N;i++){
+		if(vis[i]==0)graphele(N,i,adj,vis,ans);
+	}
+	for(int i:ans){
+		cout<<i<<"--->";
+	}
+}
