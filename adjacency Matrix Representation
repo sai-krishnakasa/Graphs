@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+  //space-complexity is no_of_nodes*no_of_nodes
+	int nodes,edges;
+	cin>>nodes>>edges;
+	//create a adjacency matrix of size no_of_nodes+1..why nodes+1 
+	//means if nodes are starting in graph starting from the 0 it is 
+	//ok to create matrix of sizes nodes,if it nodes are started from 1
+	//then we need to create nodes+1 matrix..
+	int adj[nodes+1][nodes+1];
+	for(int i=0;i<edges;i++){
+		int u,v;
+		cin>>u>>v;
+		adj[u][v]=1;
+		adj[v][u]=1;//if graph is bi-directional
+	}
+}
