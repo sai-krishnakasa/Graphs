@@ -1,3 +1,5 @@
+Related problems : 1971. Find if Path Exists in Graph
+GFG:bfs of a graph(Note:it is on disconnected components)
 #include<bits/stdc++.h>
 using namespace std;
 void graphele(int node,vector<int> adj[],vector<int>&vis,vector<int>&ans){
